@@ -527,10 +527,15 @@
       }
     }
 
+    function isMobileDevice() {
+      return window.matchMedia("(max-width: 768px)").matches;
+    }
+
     // Create nodes and store in array
     function init() {
       nodes = [];
-      const numberOfNodes = 100;
+      const numberOfNodes =  75;
+      
       for (let i = 0; i < numberOfNodes; i++) {
         const x = Math.random() * canvas.width;
         const y = Math.random() * canvas.height;

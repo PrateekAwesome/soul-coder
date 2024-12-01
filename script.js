@@ -1,6 +1,46 @@
 // navbar transparency 
 const navbar = document.getElementById('navbar');
 
+const homeButton = document.getElementById('home');
+const servicesButton = document.getElementById('services');
+const projectsButton = document.getElementById('projects');
+const aboutButton = document.getElementById('about');
+const contactButton = document.getElementById('contact');
+
+const targetHomeSection = document.getElementById('container-section-1');
+
+homeButton.addEventListener('click' , function() {
+  targetHomeSection.scrollIntoView({
+    behaviour : 'smooth' , 
+    block : 'start' 
+  });
+});
+
+const targetServicesSection = document.getElementById('carousel-container');
+
+servicesButton.addEventListener('click' , function() {
+  targetServicesSection.scrollIntoView({
+    behaviour : 'smooth' , 
+    block : 'start' 
+  });
+});
+
+const targetContactsSection = document.getElementById('footer-section');
+
+contactButton.addEventListener('click' , function() {
+  targetContactsSection.scrollIntoView({
+    behaviour : 'smooth' , 
+    block : 'end' 
+  });
+});
+
+
+
+
+
+
+
+
 // function to handle scroll event 
 window.onscroll = function() {
   if (window.scrollY > 0){
