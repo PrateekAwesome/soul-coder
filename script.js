@@ -1,5 +1,7 @@
 // navbar transparency 
 const navbar = document.getElementById('navbar');
+const hamburger = document.querySelector('.hamburger');
+const navMenu = document.querySelector('nav ul');
 
 const homeButton = document.getElementById('home');
 const servicesButton = document.getElementById('services');
@@ -14,6 +16,7 @@ homeButton.addEventListener('click' , function() {
     behaviour : 'smooth' , 
     block : 'start' 
   });
+  navMenu.classList.toggle('active');
 });
 
 const targetServicesSection = document.getElementById('carousel-container');
@@ -23,6 +26,7 @@ servicesButton.addEventListener('click' , function() {
     behaviour : 'smooth' , 
     block : 'start' 
   });
+  navMenu.classList.toggle('active');
 });
 
 const targetContactsSection = document.getElementById('footer-section');
@@ -32,6 +36,7 @@ contactButton.addEventListener('click' , function() {
     behaviour : 'smooth' , 
     block : 'end' 
   });
+  navMenu.classList.toggle('active');
 });
 
 
@@ -60,8 +65,7 @@ window.onscroll = function() {
     
     
     // Hamburger Script 
-    const hamburger = document.querySelector('.hamburger');
-    const navMenu = document.querySelector('nav ul');
+
 
     hamburger.addEventListener('click', () => {
       navMenu.classList.toggle('active');

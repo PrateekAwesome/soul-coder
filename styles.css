@@ -382,12 +382,13 @@ animation: disappear 2s ease-out forwards;
           opacity: 0;
       }
   }
-
-  .carousel-container {
+@media screen and (min-width : 768px) {
+.carousel-container {
 width: 80%;
 height: 80vh;
 position: relative;
 overflow: hidden;
+}
 }
 
 .carousel {
@@ -509,6 +510,12 @@ right: 15px;
 }
 .next-btn {
   right : 8px ; 
+}
+.carousel-container {
+  width: 80%;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
 }
 }
 
