@@ -15,7 +15,7 @@
     }
     
     canvas {
-
+      
       position: fixed;
       top: 0;
       left: 0;
@@ -97,7 +97,7 @@
       background-color : rgba(255,255,255,0.01);
       border-radius : 20px ;
       margin : 1vh 1vw ; 
-      
+      height : 200vh  ; 
       display : flex ; 
       
       justify-content: space-evenly;
@@ -109,7 +109,7 @@
 /* left and right sections using grid */
     .course-left-section {
       background:rgba(255,255,255,0.07);
-      
+      height : 200vh ; 
       border-radius : 20px ; 
 
       /* inside parts */
@@ -120,22 +120,27 @@
       padding : 20px ; 
     }
 
+    .course-right-section {
+      background:rgba(255,255,255,0.07);
+      position : relative ; 
+      top : 20vh ; 
+      height : 200vh ;
+      padding : 20px ; 
+      
+    }
 
     
 
     .ratings .stars {
         display: flex;
         gap: 2px;
-        justify-content : center ; 
     }
 
     .course-video {
         margin-top: 20px;
         border-radius : 20px ; 
-        width : 90%; 
+        width : 560px ; 
         height : 340px ; 
-        display : flex ; 
-        justify-content : center ; 
 
     }
 
@@ -146,33 +151,8 @@
     @media screen and (max-width:768px) {
       .course-video iframe {
       border-radius : 10px ; 
-      width : 500px; 
-      height : 300px;  
+      
     }
-    }
-    @media screen and (max-width:558px) {
-      .course-video iframe {
-        width : 400px ; 
-        height : 240px ; 
-      }
-    }
-    @media screen and (max-width:440px) {
-      .course-video iframe {
-        width : 300px ; 
-        height : 180px ; 
-      }
-    }
-    @media screen and (max-width:350px) {
-      .course-video iframe {
-        width : 250px ; 
-        height : 150px ; 
-      }
-    }
-    @media screen and (max-width:300px) {
-      .course-video iframe {
-        width : 200px ; 
-        height : 120px ; 
-      }
     }
     
     .course-content-review {
@@ -213,16 +193,8 @@
     }
 
     .course-content-review{
-      width : 90% ; 
+  
     }
-
-    .day {
-      border-left: 4px solid #6a1b9a;
-      margin-bottom: 20px;
-      padding-left: 15px;
-      word-wrap: break-word; /* Ensures long words wrap */
-      overflow-wrap: break-word;
-}
 /*  */
 
   </style>
@@ -264,141 +236,38 @@
               <div class="course-content-review">
                   <button id="courseInfoBtn" class="changeBtn">Course Info</button>
                   <button id="reviewBtn" class="changeBtn">Review</button>
-                  <button id="CourseDetailsBtn" class="changeBtn">Course Details</button>
                   <hr>
                   <!-- Course Info Section -->
                   <div id="courseInfo" class="info-section">
                       <!-- Add course info dynamically based on level selected -->
                       <div id="level-1-info" class="course-details" >
-                        <h1>7-Day Prompt Engineering Course</h1>
-                        <p>Master the art of creating effective prompts in just one week!</p>
-                        <section>
-                          <div class="day">
-                            <h2>Day 1: Introduction to Prompt Engineering</h2>
-                            <ul>
-                                <li><strong>Topics Covered:</strong> What is prompt engineering, overview of LLMs, importance of prompts.</li>
-                                <li><strong>Activities:</strong> Write and test basic prompts, analyze good vs. bad prompts.</li>
-                                <li><strong>Outcome:</strong> Understand basic concepts and create simple prompts.</li>
-                            </ul>
-                          </div>
-                  
-                          <div class="day">
-                              <h2>Day 2: Types of Prompts</h2>
-                              <ul>
-                                  <li><strong>Topics Covered:</strong> Instructional, generative, conversational prompts; specific vs. generic prompts.</li>
-                                  <li><strong>Activities:</strong> Experiment with various prompt types and analyze model responses.</li>
-                                  <li><strong>Outcome:</strong> Differentiate and apply various types of prompts effectively.</li>
-                              </ul>
-                          </div>
-                  
-                          <div class="day">
-                              <h2>Day 3: Prompt Optimization</h2>
-                              <ul>
-                                  <li><strong>Topics Covered:</strong> Techniques for improving prompts, few-shot and zero-shot prompting, temperature settings.</li>
-                                  <li><strong>Activities:</strong> Rewrite poorly performing prompts, practice few-shot examples.</li>
-                                  <li><strong>Outcome:</strong> Learn to optimize prompts for better results.</li>
-                              </ul>
-                          </div>
-                  
-                          <div class="day">
-                              <h2>Day 4: Prompt Debugging</h2>
-                              <ul>
-                                  <li><strong>Topics Covered:</strong> Identifying and fixing issues in prompts, improving clarity and precision.</li>
-                                  <li><strong>Activities:</strong> Debug real-world examples of ineffective prompts.</li>
-                                  <li><strong>Outcome:</strong> Master the art of troubleshooting prompts.</li>
-                              </ul>
-                          </div>
-                  
-                          <div class="day">
-                              <h2>Day 5: Prompt Applications in Various Domains</h2>
-                              <ul>
-                                  <li><strong>Topics Covered:</strong> Content creation, data analysis, coding assistance, domain-specific prompts.</li>
-                                  <li><strong>Activities:</strong> Craft prompts for specific domains and compare examples.</li>
-                                  <li><strong>Outcome:</strong> Create tailored prompts for real-world applications.</li>
-                              </ul>
-                          </div>
-                  
-                          <div class="day">
-                              <h2>Day 6: Advanced Techniques</h2>
-                              <ul>
-                                  <li><strong>Topics Covered:</strong> Chain of thought (CoT) prompting, multistep prompting, ethical considerations.</li>
-                                  <li><strong>Activities:</strong> Implement CoT and multistep prompts, identify biases in prompts.</li>
-                                  <li><strong>Outcome:</strong> Gain insights into advanced prompting techniques and ethics.</li>
-                              </ul>
-                          </div>
-                  
-                          <div class="day">
-                              <h2>Day 7: Capstone Project and Wrap-Up</h2>
-                              <ul>
-                                  <li><strong>Topics Covered:</strong> Recap of key concepts, using tools like OpenAI Playground.</li>
-                                  <li><strong>Activities:</strong> Create a prompt-based solution for a real-world problem, peer reviews.</li>
-                                  <li><strong>Outcome:</strong> Complete a capstone project showcasing prompt engineering skills.</li>
-                              </ul>
-                          </div>
-                      </section>
-              
-                          
+                          <h3>Prompt Engineering Course Curriculum</h3>
+                          <ul>
+                              <li>Introduction to Prompt Engineering</li>
+                              <li>Understanding GPT and other AI models</li>
+                              <li>Hands-on Prompt Building</li>
+                              <!-- Add more details -->
+                          </ul>
+                      </div>
+          
                       <div id="level-2-info" class="course-details" style="display: none;">
                           <h3>AI Theory Course Curriculum</h3>
-                          <section>
-                            <div class="day">
-                                <h2>Week 1: Advanced Neural Networks</h2>
-                                <ul>
-                                    <li>Topics: Deep learning basics, optimization techniques, and activation functions.</li>
-                                    <li>Outcome: Build and optimize neural networks.</li>
-                                </ul>
-                            </div>
-                            <div class="day">
-                                <h2>Week 2: Natural Language Processing</h2>
-                                <ul>
-                                    <li>Topics: Tokenization, embeddings, and sentiment analysis.</li>
-                                    <li>Outcome: Implement basic NLP pipelines.</li>
-                                </ul>
-                            </div>
-                            <div class="day">
-                                <h2>Week 3: Reinforcement Learning Basics</h2>
-                                <ul>
-                                    <li>Topics: Markov Decision Processes, Q-Learning, Deep Q-Learning.</li>
-                                    <li>Outcome: Understand RL and build simple RL models.</li>
-                                </ul>
-                            </div>
-                            <div class="day">
-                                <h2>Week 4: AI Ethics and Capstone</h2>
-                                <ul>
-                                    <li>Topics: AI ethics, responsible AI, and project.</li>
-                                    <li>Outcome: Create an AI-based solution adhering to ethical standards.</li>
-                                </ul>
-                            </div>
-                        </section>
-                        
+                          <ul>
+                              <li>AI Fundamentals</li>
+                              <li>Machine Learning Techniques</li>
+                              <li>Neural Networks Deep Dive</li>
+                              <!-- Add more details -->
+                          </ul>
                       </div>
           
                       <div id="level-3-info" class="course-details" style="display: none;">
-                        <h3>AI Advanced Course Curriculum </h3>
-                        <section>
-                          <div class="day">
-                              <h2>Month 1: Advanced Deep Learning</h2>
-                              <ul>
-                                  <li>Topics: CNNs, RNNs, LSTMs, and GANs.</li>
-                                  <li>Outcome: Build models for image generation and sequential data.</li>
-                              </ul>
-                          </div>
-                          <div class="day">
-                              <h2>Month 2: Advanced NLP and RL</h2>
-                              <ul>
-                                  <li>Topics: Transformers, GPT models, advanced RL techniques.</li>
-                                  <li>Outcome: Apply state-of-the-art NLP and RL techniques.</li>
-                              </ul>
-                          </div>
-                          <div class="day">
-                              <h2>Month 3: Specialized AI Applications</h2>
-                              <ul>
-                                  <li>Topics: Explainable AI, AI for healthcare, AI for business.</li>
-                                  <li>Outcome: Deliver a high-impact AI application.</li>
-                              </ul>
-                          </div>
-                      </section>
-                      
+                          <h3>AI Projects Curriculum</h3>
+                          <ul>
+                              <li>Real-time Chatbot Project</li>
+                              <li>AI-Powered Recommendation System</li>
+                              <li>Image Recognition Project</li>
+                              <!-- Add more details -->
+                          </ul>
                       </div>
                   </div>
           
@@ -407,48 +276,46 @@
                       <h3>Course Reviews</h3>
                       <p>Student feedback and reviews will go here...</p>
                   </div>
-
-                  <div id="courseDetails" class="info-section" style="display:none">
-                    <!-- Course Details with Font Awesome Icons -->
-                    <div class="course-details">
-                      <p><i class="fas fa-signal"></i> Difficulty: <span id="course-difficulty">Beginner</span></p>
-                      <p><i class="fas fa-clock"></i> Hours: <span id="course-hours">5 hours</span></p>
-                      <p><i class="fas fa-chalkboard-teacher"></i> Live Classes</p>
-                      <p><i class="fas fa-certificate"></i> Certificate of Completion</p>
-                      <p><i class="fas fa-calendar"></i> Last Updated: <span id="last-updated">[Today’s Date]</span></p>
-                    </div>
-
-                    <!-- Box 1: Course Features -->
-                    <div class="course-box" >
-                        <h4>Material Includes</h4>
-                        <ul>
-                            <li>Live Classes</li>
-                            <li>Lifetime Access</li>
-                            <li><span id="course-hours-info">5 hours</span> of content</li>
-                            <li>Certificate of Completion</li>
-                        </ul>
-                    </div>
-
-                    <!-- Box 2: Requirements and Audience -->
-                    <div class="course-box">
-                        <h4>Requirements</h4>
-                        <p id="course-requirements">No prior knowledge needed</p>
-
-                        <h4>Audience</h4>
-                        <uls>
-                            <li>Beginners</li>
-                            <li>College Students</li>
-                            <li>School Students</li>
-                            <li>Business Owners</li>
-                            <li>Employees</li>
-                        </ul>
-                    </div>
-                  </div>
               </div>
         
             </div>
           </div>
-          
+          <div class="course-right-section">
+            <!-- Course Details with Font Awesome Icons -->
+            <div class="course-details">
+              <p><i class="fas fa-signal"></i> Difficulty: <span id="course-difficulty">Beginner</span></p>
+              <p><i class="fas fa-clock"></i> Hours: <span id="course-hours">5 hours</span></p>
+              <p><i class="fas fa-chalkboard-teacher"></i> Live Classes</p>
+              <p><i class="fas fa-certificate"></i> Certificate of Completion</p>
+              <p><i class="fas fa-calendar"></i> Last Updated: <span id="last-updated">[Today’s Date]</span></p>
+            </div>
+
+            <!-- Box 1: Course Features -->
+            <div class="course-box" >
+                <h4>Material Includes</h4>
+                <ul>
+                    <li>Live Classes</li>
+                    <li>Lifetime Access</li>
+                    <li><span id="course-hours-info">5 hours</span> of content</li>
+                    <li>Certificate of Completion</li>
+                </ul>
+            </div>
+
+            <!-- Box 2: Requirements and Audience -->
+            <div class="course-box">
+                <h4>Requirements</h4>
+                <p id="course-requirements">No prior knowledge needed</p>
+
+                <h4>Audience</h4>
+                <uls>
+                    <li>Beginners</li>
+                    <li>College Students</li>
+                    <li>School Students</li>
+                    <li>Business Owners</li>
+                    <li>Employees</li>
+                </ul>
+            </div>
+          </div>
         </div>
         
       </div>
@@ -724,19 +591,11 @@
 document.getElementById('courseInfoBtn').addEventListener('click', function () {
     document.getElementById('courseInfo').style.display = 'block';
     document.getElementById('reviewSection').style.display = 'none';
-    document.getElementById('courseDetails').style.display = 'none' ; 
 });
 
 document.getElementById('reviewBtn').addEventListener('click', function () {
     document.getElementById('courseInfo').style.display = 'none';
     document.getElementById('reviewSection').style.display = 'block';
-    document.getElementById('courseDetails').style.display = 'none';
-});
-
-document.getElementById('CourseDetailsBtn').addEventListener('click', function () {
-    document.getElementById('courseInfo').style.display = 'none';
-    document.getElementById('reviewSection').style.display = 'none';
-    document.getElementById('courseDetails').style.display = 'block';
 });
 
 // Handle Course Level Selection

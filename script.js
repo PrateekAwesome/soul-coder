@@ -94,7 +94,7 @@ window.onscroll = function() {
 
 
     // Code Alive Element 
-  const text = "Make your Code Come Alive";
+  const text = "Make Code Come Alive";
   let index = 0;
   let isTyping = true;
 
