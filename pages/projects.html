@@ -4,10 +4,164 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1f1f1f; /* Dark background */
+            color: white;
+            overflow-x : hidden ; 
+
+            
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            
+            padding: 15px;
+            top:0 ; 
+            position: sticky;
+            z-index: 1000;
+            width : 100% ; 
+
+        }
+
+        .visible {
+            background-color : #2b003a;
+
+        }
+        .transparent {
+            background-color : rgba(43,0,58,0.3 );
+        }
+
+        /* Navbar Brand */
+        
+        .brand img {
+            object-fit : contain ;
+            width : 60px ; 
+        }
+
+        .nav-logo{
+            object-fit : contain ;  
+            cursor : pointer ;
+        }
+        
+        .image-contain {
+            width: 100%;
+            height: 300px;
+            object-fit: contain;
+        }
+
+        /* Navbar items */
+        nav ul {
+            display: flex;
+            list-style: none;
+            justify-content: center;
+            align-items: center ;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+            position: relative;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            font-size: 18px;
+            color: #fff;
+            padding: 10px 20px;
+            transition: 0.3s ease-in-out;
+            position: relative;
+        }
+
+        /* Glowing effect */
+        nav ul li a:hover {
+            background-color: #6600ff;
+            color: #ffffff;
+            border-radius: 30px;
+            box-shadow: 0 0 10px #ff00ff, 0 0 20px #6600ff, 0 0 30px #ff00ff, 0 0 40px #6600ff;
+        }
+
+        /* Hamburger icon */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        .hamburger div {
+            width: 30px;
+            height: 4px;
+            background-color: white;
+            margin: 5px;
+            transition: all 0.3s ease;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            nav ul {
+            flex-direction: column;
+            position: absolute;
+            top: 100%;
+            left: -100%;
+            width: 100%;
+            height: 100vh;
+            background-color: #2b003a;
+            text-align: center;
+            transition: all 0.5s ease;
+            }
+
+            nav ul.active {
+            left: 0;
+            }
+
+            nav ul li {
+            margin: 30px 0;
+            }
+
+            .hamburger {
+            display: flex;
+            }
+        }
+
+        .main-container {
+            display : flex ;
+            flex-direction : column ; 
+            justify-content : center ; 
+            align-items : center ; 
+            text-align : center ; 
+            width : 100% ; 
+            height : 100% ; 
+        }
+
+    </style>
 </head>
 <body>
     <div class="main-container">
-        <div></div>
+        <nav id="navbar" class="visible">
+            <div class="brand"><img src="../assets/images/logo.png" alt="Soul Coder Logo"></div>
+            <ul>
+              <li><a href="../index.html#home">Home</a></li>
+              <li><a href="../index.html#services">Services</a></li>
+              <li><a href="#projects">Projects</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="../index.html#contact" >Contact</a></li>
+            </ul>
+            <div class="hamburger">
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+        </nav>
     </div>
 </body>
+<script>
+
+</script>
 </html>
