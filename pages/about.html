@@ -3,72 +3,167 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Soul Coder - Your Path to Coding Mastery</title>
+    <title>SoulCoder - Krishna's Code</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" type="image/png" href="assets/images/just_soul.png" sizes="32x32">
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f0f0f0; /* Light purple background */
-}
+            font-family: Arial, sans-serif;
+            background-color: #1f1f1f; /* Dark background */
+            color: white;
+            overflow-x : hidden ; 
 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 50px;
-}
+            
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            
+            padding: 15px;
+            top:0 ; 
+            position: sticky;
+            z-index: 1000;
+            width : 100% ; 
 
-.section-title {
-    font-size: 36px;
-    color: #663399; /* Dark purple */
-    text-align: center;
-    margin-bottom: 30px;
-}
+        }
 
-.section-description {
-    font-size: 18px;
-    line-height: 1.6;
-    text-align: center;
-    margin-bottom: 30px;
-}
+        .visible {
+            background-color : #2b003a;
 
-.team-section {
-    display: flex;
-    justify-content: space-around;
-}
+        }
+        .transparent {
+            background-color : rgba(43,0,58,0.3 );
+        }
 
-.team-member {
-    text-align: center;
-}
+        /* Navbar Brand */
+        
+        .brand img {
+            object-fit : contain ;
+            width : 60px ; 
+        }
 
-.cta-button {
-    background-color: #663399;
-    color: #fff;
-    padding: 15px 30px;
-    border: none;
-    border-radius: 5px;
-    text-decoration: none;
-    font-weight: bold;
-}
+        .nav-logo{
+            object-fit : contain ;  
+            cursor : pointer ;
+        }
+        
+        .image-contain {
+            width: 100%;
+            height: 300px;
+            object-fit: contain;
+        }
+
+        /* Navbar items */
+        nav ul {
+            display: flex;
+            list-style: none;
+            justify-content: center;
+            align-items: center ;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+            position: relative;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            font-size: 18px;
+            color: #fff;
+            padding: 10px 20px;
+            transition: 0.3s ease-in-out;
+            position: relative;
+        }
+
+        /* Glowing effect */
+        nav ul li a:hover {
+            background-color: #6600ff;
+            color: #ffffff;
+            border-radius: 30px;
+            box-shadow: 0 0 10px #ff00ff, 0 0 20px #6600ff, 0 0 30px #ff00ff, 0 0 40px #6600ff;
+        }
+
+        /* Hamburger icon */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        .hamburger div {
+            width: 30px;
+            height: 4px;
+            background-color: white;
+            margin: 5px;
+            transition: all 0.3s ease;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            nav ul {
+            flex-direction: column;
+            position: absolute;
+            top: 100%;
+            left: -100%;
+            width: 100%;
+            height: 100vh;
+            background-color: #2b003a;
+            text-align: center;
+            transition: all 0.5s ease;
+            }
+
+            nav ul.active {
+            left: 0;
+            }
+
+            nav ul li {
+            margin: 30px 0;
+            }
+
+            .hamburger {
+            display: flex;
+            }
+        }
+
+        .main-container {
+            display : flex ;
+            flex-direction : column ; 
+            justify-content : center ; 
+            align-items : center ; 
+            text-align : center ; 
+            width : 100% ; 
+            height : 100% ; 
+        }
+
     </style>
 </head>
 <body>
-    <section id="about">
-        <div class="container">
-            <h2 class="section-title">About Soul Coder</h2>
-            <p class="section-description">
-                We believe in the power of coding to transform lives. At Soul Coder, we're committed to providing innovative and engaging learning experiences for all ages. Our mission is to make coding accessible and enjoyable, empowering learners to unleash their creativity and problem-solving skills.
-            </p>
-            <div class="team-section">
-                <h3 class="section-title">Our Team</h3>
-                <div class="team-member">
-                    <img src="your-image.jpg" alt="Your Name">
-                    <h4>Your Name</h4>
-                    <p>Your role and a brief bio.</p>
-                </div>
-                </div>
-            <a href="#" class="cta-button">Join Our Live Classes</a>
-        </div>
-    </section>
+    <div class="main-container">
+        <nav id="navbar" class="visible">
+            <div class="brand"><img src="../assets/images/logo.png" alt="Soul Coder Logo"></div>
+            <ul>
+              <li><a href="../index.html#home">Home</a></li>
+              <li><a href="../index.html#services">Services</a></li>
+              <li><a href="projects.html">Projects</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="../index.html#contact" >Contact</a></li>
+            </ul>
+            <div class="hamburger">
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+        </nav>
+    </div>
 </body>
+<script>
+
+</script>
 </html>
